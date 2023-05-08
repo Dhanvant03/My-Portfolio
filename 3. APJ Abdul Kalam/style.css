@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.container{
+    background: #e5e5fd;
+    min-height: 100vh;
+    border: 10px solid #1d1e4c;
+    padding: 0 20px;
+}
+.content{
+    max-width: 900px;
+    margin: 0 auto;
+}
+.top-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+.section-image, img{
+    width: 300px;
+    height: 350px;
+}
+.section-image{
+    border-radius: 50%;
+    overflow: hidden;
+}
+.top-section h1{
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #1d1e4c;
+    text-transform: uppercase;
+}
+.top-section h4{
+    text-align: end;
+    font-size: 22px;
+}
+
+.about-section{
+    margin-top: 50px;
+}
+.about-section h2{
+    font-size: 2.8rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.about-section p{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    text-indent: 5%;
+    letter-spacing: 1.2px;
+    text-align: justify;
+}
+.about-section p span{
+    font-weight: bold;
+}
+
+.biography-section{
+    margin: 50px 0;
+}
+.biography-section h3{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.biography-section ul{
+    margin-left: 40px;
+}
+.biography-section ul li{
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+}
+footer{
+    margin: 0 10px 20px 0;
+}
+footer p{
+    text-align: end;
+}
+footer a{
+    text-decoration: none;
+    transition: .5s;font-weight: bold;
+    
+}
+footer a:hover{
+    color: navy;
+}
+
+@media screen and (max-width: 900px){
+    .top-section h1{
+        font-size: 2.4rem;
+    }
+}
+
+@media screen and (max-width: 780px){
+    .top-section{
+        justify-content: center;
+        margin-top: 50px;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .top-section h1{
+        font-size: 2.4rem;
+    }
+    .about-section h2{
+        font-size: 2.4rem;
+    }
+    .about-section p{
+        font-size: 1rem;
+    }
+    .biography-section h3{
+        font-size: 1.2rem;
+    }
+    .biography-section ul li{
+        font-size: 1rem;
+    }
+}

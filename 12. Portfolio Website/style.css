@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+html,
+body {
+    line-height: 1.4;
+    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    color: white;
+}
+a{
+    text-decoration: none;
+}
+body {
+    font-size: 1.4rem;
+}
+
+:root {
+    --lighting-color: #0089b7;
+    --dark-color: #003d62;
+    --darker-color: #003251;
+    --secondary-color: #fff700;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+section{
+    scroll-margin: 6rem;
+}
+
+/* Header */
+header {
+    background: var(--lighting-color);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+}
+
+nav ul li {
+    border-bottom: 0.3rem solid transparent;
+    padding-bottom: 0.2rem;
+    transition: .5s;
+}
+
+nav ul li:hover {
+    border-bottom: 0.3rem solid var(--secondary-color);
+}
+
+/* Main Section */
+
+/* Hero Section */
+#hero {
+    background: var(--dark-color);
+    padding: 4rem;
+    border-bottom: .6rem solid var(--lighting-color);
+    padding-inline: 2rem;
+}
+
+#hero .container {
+    /* max-width: 1000px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5rem;
+}
+
+.hero-content {
+    display: grid;
+    place-items: center;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.hero-image img {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 250px;
+}
+
+.hi-text {
+    font-size: 5.4rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.name-text {
+    font-size: 3.8rem;
+}
+
+#hero h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    padding-right: 8px;
+
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: 0.10em solid orange;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    /* Adjust as needed */
+    animation: typing 4s steps(40, end),
+        blink 0.75s step-end infinite;
+
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 60%;
+    }
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: orange;
+    }
+}
+
+
+/* Project Section */
+#project {
+    background: var(--darker-color);
+}
+
+#project h2 {
+    font-size: 6rem;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.project-container {
+    display: grid;
+    padding: 2rem;
+    padding-bottom: 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.grid-item {
+    display: grid;
+    place-items: center;
+}
+
+.card {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card:hover img {
+    transform: scale(1.05);
+    transition: .5s;
+    opacity: 0.8;
+}
+
+.card-content {
+    position: relative;
+    padding: 1.5rem;
+    top: -6.5rem;
+    margin-bottom: -6.5rem;
+    transform: translatey(100px);
+    transition: .5s;
+}
+
+.card:hover .card-content {
+    background: white;
+    width: 100%;
+    color: var(--dark-color);
+    transform: translatey(0px);
+}
+
+.card-content h3 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* Contact Section */
+#contact {
+    background: var(--dark-color);
+    padding: 0 2rem;
+}
+
+#contact h2 {
+    font-size: 6rem;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+#contact .container {
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.top-contact,
+.bottom-contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contact-way {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.contact-way i {
+    font-size: 3rem;
+}
+
+.contact-way h3 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* Footer */
+footer{
+    background: var(--darker-color);
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.8rem;
+}
+
+@media (max-width: 786px){
+    html{
+        font-size: 40%;
+    }
+    #hero .container{
+        flex-direction: column;
+    }
+    .hero-image img{
+        width: 100%;
+    }
+    #contact .container{
+        height: 40vh;
+    }
+}
+@media (max-width: 500px){
+    html{
+        font-size: 32%;
+    }
+}
