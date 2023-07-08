@@ -18,9 +18,11 @@ body {
     scroll-behavior: smooth;
     color: white;
 }
-a{
+
+a {
     text-decoration: none;
 }
+
 body {
     font-size: 1.4rem;
 }
@@ -36,7 +38,8 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
-section{
+
+section {
     scroll-margin: 6rem;
 }
 
@@ -281,29 +284,51 @@ nav ul li:hover {
 }
 
 /* Footer */
-footer{
+footer {
     background: var(--darker-color);
     text-align: center;
     padding: 2rem;
     font-size: 1.8rem;
 }
 
-@media (max-width: 786px){
-    html{
+@media (max-width: 786px) {
+    html {
         font-size: 40%;
     }
-    #hero .container{
+
+    #hero .container {
         flex-direction: column;
     }
-    .hero-image img{
+
+    .hero-image img {
         width: 100%;
     }
-    #contact .container{
+
+    #contact .container {
         height: 40vh;
     }
 }
-@media (max-width: 500px){
-    html{
+
+@media (max-width: 500px) {
+    html {
         font-size: 32%;
+    }
+    .grid-item{
+        padding-block: 1rem;
+    }
+}
+
+@media (max-width: 340px){
+    .project-container {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .card{
+        width: 90%;
+    }
+    .card img{
+        width: 100%;
+    }
+    .grid-item{
+        padding-block: 0.5rem;
     }
 }
